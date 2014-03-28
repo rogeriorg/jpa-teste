@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd" -->
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">  
+  
+  <persistence-unit name="testing-h2" transaction-type="RESOURCE_LOCAL">
+    <description>Persistence using a built-in memory-only H2 (Hyperion) database</description>
+    
+    <class>com.teste.jpa.domain.Pessoa</class>
+    
+    <exclude-unlisted-classes>true</exclude-unlisted-classes>
+    <!-- validation-mode>AUTO</validation-mode -->
+    <properties>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+      <property name="hibernate.connection.driver_class" value="org.h2.Driver"/>
+      <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:test;DB_CLOSE_DELAY=-1"/>
+    </properties>
+  </persistence-unit>
+  
+  <!-- persistence-unit name="testing-psql" transaction-type="RESOURCE_LOCAL">
+    <description>Persistence using my (production) PostgreSQL local database</description>
+    <class>foo</class>
+    <class>experimental</class>
+    <exclude-unlisted-classes>true</exclude-unlisted-classes>
+    <validation-mode>AUTO</validation-mode>
+    <properties>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+      <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
+      <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+      <property name="hibernate.temp.use_jdbc_metadata_defaults" value="false"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql:testing"/>
+      <property name="javax.persistence.jdbc.user" value="me"/>
+      <property name="javax.persistence.jdbc.password" value="sdfsdf9"/>
+    </properties>
+  </persistence-unit -->
+</persistence>
