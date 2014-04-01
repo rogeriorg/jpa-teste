@@ -9,7 +9,9 @@
     <description>Persistence using a built-in memory-only H2 (Hyperion) database</description>
     
     <class>com.teste.jpa.domain.Pessoa</class>
-    
+    <class>com.teste.jpa.mundoj.edicao19.domain.ContaPagar</class>
+    <class>com.teste.jpa.mundoj.edicao19.domain.Fornecedor</class>
+        
     <exclude-unlisted-classes>true</exclude-unlisted-classes>
     <!-- validation-mode>AUTO</validation-mode -->
     <properties>
