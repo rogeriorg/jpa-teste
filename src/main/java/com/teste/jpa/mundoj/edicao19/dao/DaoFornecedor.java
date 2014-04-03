@@ -66,7 +66,7 @@ public class DaoFornecedor extends Dao<Fornecedor> {
 		// JOIN CONTAPAGAR as contasPagar where contasPagar.fornecedor.id = id
 		DetachedCriteria criteriaContaPagar = criteria.createCriteria("fornecedor.contas", "contasPagar");
 		//                                      and contaPagar.pago = true  
-		criteriaContaPagar.add(Restrictions.eq("pago", Boolean.TRUE));
+		criteriaContaPagar.add(Restrictions.eq("contasPagar.pago", Boolean.TRUE));
 		
 		return getExecutableCriteria(criteria).list();
 	}
