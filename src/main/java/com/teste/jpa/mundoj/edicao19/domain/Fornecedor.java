@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderBy;
 
-@Entity
+@Entity(name= "FORNECEDOR")
 public class Fornecedor {
 
 	@Id

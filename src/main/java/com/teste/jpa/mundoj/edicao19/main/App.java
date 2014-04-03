@@ -11,6 +11,7 @@ import org.hibernate.Session;
 import org.hibernate.criterion.DetachedCriteria;
 
 import com.teste.jpa.mundoj.edicao19.dao.Dao;
+import com.teste.jpa.mundoj.edicao19.domain.ContaPagar;
 import com.teste.jpa.mundoj.edicao19.domain.Fornecedor;
 
 public class App {
